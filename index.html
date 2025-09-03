@@ -115,10 +115,11 @@
 
       .requirements-content {
         margin-top: 15px;
+        display: none;
       }
 
-      #requirementsContent {
-        display: none;
+      .requirements-content.show {
+        display: block;
       }
 
       .requirements-content p {
@@ -192,9 +193,9 @@
       <a
         href="#"
         class="link-button"
-        onclick="navigateToLink('https://tool2.example.com')"
+        onclick="navigateToLink('https://docs.google.com/spreadsheets/d/1w7NTzKjbhFGn13vy40Bw_qmfH1Twu84qRgns7gtkoT4/edit?usp=sharing')"
       >
-        Tool 2
+        FIND DRAWER SPARE PARTS (WS AZS)
       </a>
 
       <a
@@ -208,11 +209,11 @@
       <div class="requirements">
         <div class="requirements-header" onclick="toggleRequirements()">
           <h3>Access Requirements</h3>
-          <button class="toggle-button" id="toggleButton">▼</button>
+          <button class="toggle-button rotated" id="toggleButton">▼</button>
         </div>
         <div class="requirements-content" id="requirementsContent">
           <p>
-            <strong>Important:</strong> These tools can only be accessed using
+            <strong>Important:</strong> EQP-Dashboard can only be accessed using
             internal WiFi.
           </p>
 
@@ -254,13 +255,8 @@
         const content = document.getElementById("requirementsContent");
         const button = document.getElementById("toggleButton");
 
-        if (content.style.display === "none") {
-          content.style.display = "block";
-          button.classList.remove("rotated");
-        } else {
-          content.style.display = "none";
-          button.classList.add("rotated");
-        }
+        content.classList.toggle("show");
+        button.classList.toggle("rotated");
       }
     </script>
   </body>
