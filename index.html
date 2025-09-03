@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EQP Tools</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #eee;
+        margin: 0 auto 20px;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 28px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .link-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin: 15px 0;
+        background: #f8f9fa;
+        color: #333;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        border: 1px solid #eee;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .link-button:hover {
+        background: #007bff;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+      }
+
+      .link-button:active {
+        transform: translateY(0);
+      }
+
+      .footer {
+        margin-top: 30px;
+        color: #999;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>EQP Tools</h1>
+      <p class="subtitle">Access all your equipment management tools</p>
+
+      <!-- <a
+        href="#"
+        class="link-button"
+        onclick="navigateToLink('http://10.99.200.224:3000/form')"
+      >
+        Create BM Report
+      </a> -->
+
+      <a
+        href="#"
+        class="link-button"
+        onclick="navigateToLink('http://10.99.200.224:3000')"
+      >
+        EQP-Dashboard
+      </a>
+
+      <a
+        href="#"
+        class="link-button"
+        onclick="navigateToLink('https://tool2.example.com')"
+      >
+        Tool 2
+      </a>
+
+      <a
+        href="#"
+        class="link-button"
+        onclick="navigateToLink('https://tool3.example.com')"
+      >
+        Tool 3
+      </a>
+
+      <p class="footer">Click any link to access the tool</p>
+    </div>
+
+    <script>
+      function navigateToLink(url) {
+        // Open the link in the same tab
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>
